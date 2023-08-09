@@ -9,8 +9,8 @@ Restart=always
 RestartSec=10
 Group=pi
 User=pi
-WorkingDirectory=/home/pi/my-remote-usb-connector/
-ExecStart=source venv/bin/activate && python services/executer-api/src/main.py 
+WorkingDirectory=/home/pi/my-remote-usb-connector/services/executer-api
+ExecStart=source venv/bin/activate && python src/main.py 
 
 [Install]
 WantedBy=multi-user.target
