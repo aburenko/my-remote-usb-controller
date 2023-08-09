@@ -1,2 +1,4 @@
-source /home/pi/my-remote-usb-controller/services/executer-api/venv/bin/activate
-python /home/pi/my-remote-usb-controller/services/executer-api/src/main.py
+#!/bin/bash
+
+source venv/bin/activate
+python src/main.py

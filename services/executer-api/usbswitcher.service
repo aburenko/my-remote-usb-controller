@@ -9,7 +9,7 @@ Restart=always
 RestartSec=10
 Group=pi
 User=pi
-ExecStart=./run.sh
+ExecStart=/home/pi/my-remote-usb-controller/services/executer-api/run.sh
 
 [Install]
 WantedBy=multi-user.target
