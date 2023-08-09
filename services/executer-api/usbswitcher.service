@@ -9,8 +9,7 @@ Restart=always
 RestartSec=10
 Group=pi
 User=pi
-Environment="SER_DIR=/home/pi/my-remote-usb-controller/services/executer-api"
-ExecStart=source "${SER_DIR}/venv/bin/activate" && python "${SER_DIR}/src/main.py"
+ExecStart=source /home/pi/my-remote-usb-controller/services/executer-api/venv/bin/activate && python /home/pi/my-remote-usb-controller/services/executer-api/src/main.py
 
 [Install]
 WantedBy=multi-user.target
