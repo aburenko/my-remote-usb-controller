@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const ButtonComponent = () => {
-    const [isPressed, setIsPressed] = useState(false);
+    const [isPressed, setIsPressed] = useState(true);
 
     const handleButtonClick = async () => {
         try {
