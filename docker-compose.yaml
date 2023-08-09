@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+
+  buttgui:
+    build:
+      context: ./services/gui
+    ports:
+      - "3000:3000"
+
+  gobutt:
+    build:
+      context: ./services/executer-api
+    privileged: true
+    pid: host
+    ports:
+      - "8888:8888"
+
