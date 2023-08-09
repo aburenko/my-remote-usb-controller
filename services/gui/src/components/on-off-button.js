@@ -7,9 +7,9 @@ const ButtonComponent = () => {
     const handleButtonClick = async () => {
         try {
             if (isPressed) {
-                await axios.post('http://0.0.0.0:8888/off');
+                await axios.post('http://172.17.0.1:8888/off');
             } else {
-                await axios.post('http://0.0.0.0:8888/on');
+                await axios.post('http://172.17.0.1:8888/on');
             }
             setIsPressed(!isPressed);
         } catch (error) {
