@@ -12,7 +12,7 @@ func main() {
 
     // POST route to turn the device on
     r.POST("/on", func(c *gin.Context) {
-        err := executeCommand("echo 'Device is ON'")
+        err := executeCommand("sudo uhubctl -l 2 -a on")
         if err != nil {
             c.JSON(500, gin.H{"error": "Failed to turn device on"})
             return
@@ -22,7 +22,7 @@ func main() {
 
     // POST route to turn the device off
     r.POST("/off", func(c *gin.Context) {
-        err := executeCommand("echo 'Device is OFF'")
+        err := executeCommand("sudo uhubctl -l 2 -a pff")
         if err != nil {
             c.JSON(500, gin.H{"error": "Failed to turn device off"})
             return
