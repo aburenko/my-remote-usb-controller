@@ -14,6 +14,7 @@ func main() {
     r.POST("/on", func(c *gin.Context) {
         err := executeCommand("sudo uhubctl -l 2 -a on")
         if err != nil {
+            log.Fatal(err)
             c.JSON(500, gin.H{"error": "Failed to turn device on"})
             return
         }
