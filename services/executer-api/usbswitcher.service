@@ -1,0 +1,16 @@
+[Unit]
+Description=UA avatar bot
+After=network.target
+StartLimitIntervalSec=5
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+Group=pi
+User=pi
+WorkingDirectory=/home/pi/my-remote-usb-connector
+ExecStart=source venv/bin/activate && python services/executer-api/src/main.py 
+
+[Install]
+WantedBy=multi-user.target
