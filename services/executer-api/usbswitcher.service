@@ -1,5 +1,5 @@
 [Unit]
-Description=UA avatar bot
+Description=Offers Api to toggle the usb port power
 After=network.target
 StartLimitIntervalSec=5
 
@@ -9,7 +9,7 @@ Restart=always
 RestartSec=10
 Group=pi
 User=pi
-WorkingDirectory=/home/pi/my-remote-usb-connector
+WorkingDirectory=/home/pi/my-remote-usb-connector/
 ExecStart=source venv/bin/activate && python services/executer-api/src/main.py 
 
 [Install]
