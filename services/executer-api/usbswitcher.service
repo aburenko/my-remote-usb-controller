@@ -9,6 +9,7 @@ Restart=always
 RestartSec=10
 Group=pi
 User=pi
+WorkingDirectory=/home/pi/my-remote-usb-controller/services/executer-api
 ExecStart=/home/pi/my-remote-usb-controller/services/executer-api/run.sh
 
 [Install]
