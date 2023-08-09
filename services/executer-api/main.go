@@ -22,7 +22,7 @@ func main() {
 
     // POST route to turn the device off
     r.POST("/off", func(c *gin.Context) {
-        err := executeCommand("sudo uhubctl -l 2 -a pff")
+        err := executeCommand("sudo uhubctl -l 2 -a off")
         if err != nil {
             c.JSON(500, gin.H{"error": "Failed to turn device off"})
             return
@@ -37,7 +37,7 @@ func main() {
 }
 
 func executeCommand(command string) error {
-    cmd := exec.Command("sh", "-c", command)
+    cmd := exec.Command(command)
     cmd.Stdout = os.Stdout
     cmd.Stderr = os.Stderr
     return cmd.Run()
